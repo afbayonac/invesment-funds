@@ -3,7 +3,7 @@ const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const async = require('async')
 
-const adapter = new FileSync("../../database/db.json")
+const adapter = new FileSync("../../frontend/database/db.json")
 const db = low(adapter)
 
 db.defaults({ funds: [] }).write()
@@ -123,7 +123,7 @@ module.exports = async () => {
   const nitSet = new Set(fundsList.map(f => f.nit))
   const nitList = [...nitSet]
   
-  const funds = await getData(nitList.slice(0,5))
+  const funds = await getData(nitList)
 
   funds.map(fund => {
     dbFund = db.get('funds').find({ uid: fund.nit }) 
