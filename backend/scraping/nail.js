@@ -2,8 +2,9 @@ const axios = require('axios');
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const async = require('async')
+const path = require('path')
 
-const adapter = new FileSync("../../frontend/database/db.json")
+const adapter = new FileSync(path.resolve(__dirname, '../../frontend/database/db.json'))
 const db = low(adapter)
 
 db.defaults({ funds: [] }).write()
@@ -34,7 +35,7 @@ db.defaults({ funds: [] }).write()
 // https://www.grupobancolombia.com/consultarFondosInversion/rest/servicio/consultarListaFondos/
 
 
-const listUrl = "https://www.grupobancolombia.com/consultarFondosInversion/rest/servicio/consultarListaFondos/";
+const listUrl = 'https://www.grupobancolombia.com/consultarFondosInversion/rest/servicio/consultarListaFondos/';
 const getUrl = (nit) => `https://www.grupobancolombia.com/consultarFondosInversion/rest/servicio/buscarInformacionFondo/${nit}`
 
 const getFunds = async () => {
