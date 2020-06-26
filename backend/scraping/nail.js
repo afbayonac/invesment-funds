@@ -118,7 +118,7 @@ const updateFund = ({ nit, valorDeUnidad, nombre, rentabilidad, valorEnPesos}) =
 }
 
 
-module.exports = async () => {
+const main = async () => {
   const fundsList = await getFunds()
   const nitSet = new Set(fundsList.map(f => f.nit))
   const nitList = [...nitSet]
@@ -136,6 +136,6 @@ module.exports = async () => {
   })
 }
 
-
+main()
 
 
