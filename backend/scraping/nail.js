@@ -101,7 +101,7 @@ const updateFund = ({ nit, valorDeUnidad, nombre, rentabilidad, valorEnPesos}) =
   db.get('funds')
     .find({uid: nit})
     .get('currentYear')
-    .push({ date, value: rentabilidad.anios.anioCorrido, name: nombre })
+    .push({ date, value: rentabilidad.anios.anioCorrido})
     .write()
 
   db.get('funds')
