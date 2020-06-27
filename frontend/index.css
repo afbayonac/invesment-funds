@@ -27,7 +27,32 @@ img {
 
 /* own css code */
 
+/*
+  colors
+*/
+:root {
+  --jet: hsla(0, 0%, 20%, 1);
+  --turquoise: hsla(167, 69%, 90%, 1);
+  --cultured: hsla(20, 1%, 99%, 1);
+  --unbleached-silk: hsla(24, 22%, 95%, 1);
+  --davys-grey: hsla(0, 0%, 37%, 1);  
+}
+
+
 
 body {
-  font-family: 'Changa', sans-serif;
+  font-family: 'Spartan', sans-serif;
+  background-color: var(--davys-grey);
+  color: var(--unbleached-silk);
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
 }
