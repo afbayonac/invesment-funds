@@ -42,6 +42,7 @@ const main = async () => {
       .attr('d', pathData)
       .attr('stroke', 'red')
       .attr('stroke-width', 1)
+      .attr('fill', 'none')
     
     graph.append('line')
       .attr('x1', 0).attr('y1', 50)
