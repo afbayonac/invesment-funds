@@ -38,21 +38,35 @@ img {
   --davys-grey: hsla(0, 0%, 37%, 1);  
 }
 
-
-
 body {
   font-family: 'Spartan', sans-serif;
   background-color: var(--davys-grey);
   color: var(--unbleached-silk);
-}
-
-.main {
-  max-width: 1200px;
-  margin: auto;
+  height: 100%;
 }
 
 header {
+  background-color: var(--jet);
   font-size: 20px;
-  line-height: 25px;
+  line-height: 40px;
   font-weight: 600;
+}
+
+header > div {
+  margin: auto;
+  max-width: 1440px;
+  text-align: center;
+}
+
+.app {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.invesment-fund {
+  max-width: 720px;
+  display: inline-block;
+  min-height: 130px;
+  padding: 10px;
+  border-bottom: 1px solid #ffffff10;
 }
